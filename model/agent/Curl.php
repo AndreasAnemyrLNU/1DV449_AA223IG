@@ -26,7 +26,7 @@ class Curl
         $ch = curl_init();
 
 
-        curl_setopt($ch, CURLOPT_URL, $this->site-);
+        curl_setopt($ch, CURLOPT_URL, $this->site->getBaseUrl() . );
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec($ch);
 

@@ -11,18 +11,15 @@ namespace model;
 
 class Site
 {
-    private $name;
-
     private $baseUrl;
+    private $name;
+    private $port;
 
-    public function __construct($name, $baseUrl)
+    public function __construct($baseUrl, $name, $port)
     {
-        $this->baseUrl = $baseUrl;
-    }
-
-    public function getName()
-    {
-        return $this->name;
+        $this->baseUrl  = $baseUrl;
+        $this->name     = $name;
+        $this->port     = $port;
     }
 
     public function getBaseUrl()
@@ -30,5 +27,13 @@ class Site
         return $this->baseUrl;
     }
 
+    public function getName()
+    {
+        return $this->name;
+    }
 
+    public function getPort()
+    {
+        return $this->port;
+    }
 }
