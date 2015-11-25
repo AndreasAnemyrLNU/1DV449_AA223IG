@@ -8,20 +8,17 @@
 
 namespace controller;
 
-
-use model\Agent;
-
 class Scrape
 {
-    private $agentData;
-
-    public function __construct()
-    {
-        $this->DoScrape();
-    }
 
     public function DoScrape()
     {
-        new Agent()
+        $agent = new \model\Agent
+        (
+            new \model\Site("10.0.2.2", "weekend-booking-web-site", 8080),
+            new \model\XpathQuery("//li")
+        );
+
+        $this->scrapedData = $agent->ScrapeSite();
     }
 }

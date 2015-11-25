@@ -8,17 +8,17 @@
 
 namespace model;
 
-class Expression
+class XpathQuery
 {
-    private $expression;
+    private $query;
 
-    public function __construct($expression)
+    public function __construct($query)
     {
-        $this->expression = $expression;
+        $this->expression = $query;
     }
 
-    public function getExpression()
+    public function getQuery()
     {
-        return $this->expression;
+        return $this->query;
     }
 }

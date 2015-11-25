@@ -9,16 +9,14 @@
 namespace controller;
 
 
+use model\DOMXpath;
+
 class Master
 {
-    private $navigation;
-
     public function DoApp()
     {
-        if($this->navigation->ClientWantSystemToScrapeSite)
-        {
-            new \controller\Scrape();
-        }
+        $scrape = new \controller\Scrape();
+        $scrape->DoScrape();
     }
 
 }

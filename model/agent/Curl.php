@@ -11,25 +11,23 @@ namespace model;
 
 class Curl
 {
-
+    private $handle;
     private $site;
+    private $scrapedData;
 
     public function __construct(\model\Site $site)
     {
+        $this->handle = curl_init();
         $this->site = $site;
     }
 
     public function CurlIt()
     {
-
-
-        $ch = curl_init();
-
-
-        curl_setopt($ch, CURLOPT_URL, $this->site->getBaseUrl() . );
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $data = curl_exec($ch);
-
-        echo $data;
+        curl_setopt($this->handle, CURLOPT_URL, $this->site->getBaseUrl() . ':' . $this->site->getPort());
+        curl_setopt($this->handle, CURLOPT_RETURNTRANSFER, 1);
+        $this->scrapedData = curl_exec($this->handle);
+        return $this->scrapedData;
     }
+
+
 }
