@@ -12,6 +12,7 @@ namespace model;
 class Curl
 {
     private $handle;
+    private $path;
     private $site;
     private $scrapedData;
 
@@ -21,13 +22,17 @@ class Curl
         $this->site = $site;
     }
 
-    public function CurlIt()
+    public function CurlIt($path = "")
     {
-        curl_setopt($this->handle, CURLOPT_URL, $this->site->getBaseUrl() . ':' . $this->site->getPort());
-        curl_setopt($this->handle, CURLOPT_RETURNTRANSFER, 1);
+        $curlOptUrl = $this->site->getBaseUrl() . ':' . $this->site->getPort() . "$path";
+
+        curl_setopt($this->handle, CURLOPT_COOKIE,              __DIR__ . './connect.sid');
+        curl_setopt($this->handle, CURLOPT_COOKIEJAR,           __DIR__ . './connect.sid');
+        curl_setopt($this->handle, CURLOPT_RETURNTRANSFER,      1);
+        curl_setopt($this->handle, CURLOPT_URL,                 $curlOptUrl);
+        curl_setopt($this->handle, CURLOPT_FOLLOWLOCATION,      1);
+
         $this->scrapedData = curl_exec($this->handle);
         return $this->scrapedData;
     }
-
-
 }

@@ -14,7 +14,7 @@ class XpathQuery
 
     public function __construct($query)
     {
-        $this->expression = $query;
+        $this->query = $query;
     }
 
     public function getQuery()

@@ -11,20 +11,36 @@ namespace model;
 
 class Agent
 {
+    private $m_curl;
     private $result;
     private $site;
     private $scrapedData;
-    private $xpathQuery;
+    private $m_xpathQuery;
+
 
     public function GetResult()
     {
         return $this->result;
     }
 
-    public function __construct(\model\Site $site, \model\XpathQuery $xpathQuery)
+    public function __construct(\model\Site $site)
     {
+        $this->m_curl = new Curl($site);
         $this->site = $site;
-        $this->xpathQuery = $xpathQuery;
+    }
+
+    private function CreateDomNodeListFromScrapedDataWithXpathQuery()
+    {
+        $domDocument = new \model\DOMDOMDocument($this->GetScrapedData());
+
+        $xpath = new DOMXpath($domDocument);
+        $domNodeList = $xpath->GetDomAfterFiltration($this->m_xpathQuery);
+        return $domNodeList;
+    }
+
+    public function SetXpathQuery(\model\XpathQuery $xpathQuery)
+    {
+        $this->m_xpathQuery = $xpathQuery;
     }
 
     private function GetScrapedData()
@@ -32,21 +48,11 @@ class Agent
         return $this->scrapedData;
     }
 
-    public function ScrapeSite()
+    public function ScrapeSite($path = "")
     {
-        $curl = new Curl($this->site);
-        $this->scrapedData = $curl->CurlIt();
 
-        $this->result = $this->CreateDomNodeListFromScrapedDataWithXpathQuery();
+        $this->scrapedData = $this->m_curl->CurlIt($path);
+        $domNodeList = $this->result = $this->CreateDomNodeListFromScrapedDataWithXpathQuery();
+        return $domNodeList;
     }
-
-    private function CreateDomNodeListFromScrapedDataWithXpathQuery()
-    {
-        $domDocument = new \model\DOMDocument($this->GetScrapedData());
-
-        $xpath = new DOMXpath($domDocument);
-        $domNodeList = $xpath->GetDomAfterFiltration($this->xpathQuery);
-    }
-
-
 }

@@ -14,15 +14,15 @@ class DOMXpath
     private $m_domDocument;
     private $m_xpath;
 
-    public function __construct(\model\DOMDocument $domDocument)
+    public function __construct(\model\DOMDOMDocument $domDocument)
     {
         $this->m_domDocument = $domDocument;
     }
 
-    public function GetDomAfterFiltration()
+    public function GetDomAfterFiltration(\model\XpathQuery $xpathQuery)
     {
-        $xpath =  new \DOMXPath($this->m_domDocument->GetDOMDocument());
+        $this->m_xpath =  new \DOMXPath($this->m_domDocument->GetDOMDocument());
 
-        $result =  $xpath->query("/html");
+        return $this->m_xpath->query($xpathQuery->getQuery());
     }
 }

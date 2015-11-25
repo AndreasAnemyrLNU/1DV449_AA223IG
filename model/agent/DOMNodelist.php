@@ -11,7 +11,6 @@ namespace model;
 
 class DOMNodelist
 {
-
     private $m_domNodeList;
 
     public function __construct(\DOMNodeList $domNodeList)
