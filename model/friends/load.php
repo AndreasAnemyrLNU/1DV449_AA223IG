@@ -8,6 +8,7 @@
 
 require_once("Calendar.php");
 require_once("Cinema.php");
+require_once("CollectionPerson.php");
 require_once("Event.php");
 require_once("Person.php");
 require_once("Restaurant.php");

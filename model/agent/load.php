@@ -8,7 +8,7 @@
 
 require_once("Agent.php");
 require_once("Curl.php");
-require_once("DOMDocument.php");
+require_once("DOMDOMDocument.php");
 require_once("DOMNodelist.php");
 require_once("DOMXpath.php");
 require_once("Site.php");

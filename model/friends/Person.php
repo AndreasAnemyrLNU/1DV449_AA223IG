@@ -9,7 +9,7 @@
 namespace model;
 
 
-class Friends
+class Person
 {
 
 }
