@@ -18,11 +18,15 @@ class PersonCollection
         return $this->persons;
     }
 
-    private function AddPerson(\model\Person $person)
+    public function AddPerson(\model\Person $person)
     {
         if($person instanceof \model\Person)
+        {
             $this->persons[] = $person;
-
-        throw new \Exception('Object to add must be of typ \model\Person');
+        }
+        else
+        {
+            throw new \Exception('Object to add must be of typ \model\Person');
+        }
     }
 }

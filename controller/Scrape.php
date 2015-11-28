@@ -12,13 +12,14 @@ namespace controller;
 
 class Scrape
 {
-    private $site;
-
     private $PersonCollection;
+
+    private $site;
 
     public function __construct()
     {
         $this->site = new \model\Site("10.0.2.2", "weekend-booking-web-site", 8080);
+        $this->PersonCollection = new \model\PersonCollection();
     }
 
     public function DoScrape()
@@ -53,25 +54,31 @@ class Scrape
             // scrapes "ok"
             $agent->SetXpathQuery(new \model\XpathQuery("/html/body/table/tbody/tr//td"));
 
+            $dayCollection = new \model\DayCollection();
             // Friday
-            $days[5]     = strtolower($agent->ScrapeSite($tmpLink)[0]->nodeValue);
+            $dayCollection->AddDay(new \model\Day(4, 'Friday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[0]->nodeValue))));
             // Saturday
-            $days[6]     = strtolower($agent->ScrapeSite($tmpLink)[1]->nodeValue);
+            $dayCollection->AddDay(new \model\Day(5, 'Saturday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[1]->nodeValue))));
             // Sunday
-            $days[7]     = strtolower($agent->ScrapeSite($tmpLink)[2]->nodeValue);
+            $dayCollection->AddDay(new \model\Day(6, 'Sunday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[2]->nodeValue))));
 
+            $person = new \model\Person($name, $dayCollection);
 
-            new \model\Person($name, $days);
-
-            new \model\PersonCollection();
-
-
-
+            $this->PersonCollection->AddPerson($person);
         }
+
+        var_dump($this->PersonCollection->GetPersons()[0]->GetDayCollection());
     }
 
     private function GetTypeDOMNode(\DOMNode $DOMNode)
     {
         return $DOMNode;
+    }
+
+    private function ConvertStringToBool($string)
+    {
+        if($string === 'ok')
+            return true;
+        return false;
     }
 }
