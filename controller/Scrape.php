@@ -25,10 +25,13 @@ class Scrape
     public function DoScrape()
     {
             $this->DoScrapeCalendar();
+
+            $this->DoScrapeCinema();
     }
 
     private function DoScrapeCalendar()
     {
+        //TODO start DRY code 999 here
         $agent = new \model\Agent($this->site);
         $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[1]/a/@href"));
         $domNodeList = $agent->ScrapeSite();
@@ -40,6 +43,7 @@ class Scrape
 
         $agent->SetXpathQuery(new \model\XpathQuery("/html/body/div/div/ul//li/a/@href"));
         $domNodeList = $agent->ScrapeSite($link);
+        // TODO end dry, fix it later....
 
         foreach($domNodeList as $domNode)
         {
@@ -75,10 +79,67 @@ class Scrape
         return $DOMNode;
     }
 
+    private function DoScrapeCinema()
+    {
+        $agent = new \model\Agent($this->site);
+        $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[2]/a/@href"));
+        $domNodeList = $agent->ScrapeSite();
+
+        $domNode = $domNodeList->item(0);
+        $domNode = $this->GetTypeDOMNode($domNode);
+        //localhost:8080/cinema/
+        $link = $domNode->nodeValue;
+
+        $days   = $this->GetDaysInFormForDoScrapeCinema($agent, $link);
+        $films  = $this->GetFilmsInFormForDoScrapeCinema($agent, $link);
+
+        var_dump($days);
+        var_dump($films);
+
+
+    }
+
+    // Used for /Calendar/
     private function ConvertStringToBool($string)
     {
         if($string === 'ok')
             return true;
         return false;
+    }
+
+    private function GetDaysInFormForDoScrapeCinema(\model\Agent $agent, $link)
+    {
+        $agent->SetXpathQuery(new \model\XpathQuery("//select[@id='day']//option[position() > 1]"));
+        $domNodeList = $agent->ScrapeSite($link);
+
+        $days = Array();
+
+        foreach ($domNodeList as $domNode) {
+            $domNode = $this->GetTypeDOMNode($domNode);
+            array_push
+            (
+                $days,
+                ['day' => $domNode->nodeValue, 'value' => $domNode->attributes->getNamedItem('value')->nodeValue]
+            );
+        }
+        return $days;
+    }
+
+    private function GetFilmsInFormForDoScrapeCinema(\model\Agent $agent, $link)
+    {
+        $agent->SetXpathQuery(new \model\XpathQuery("//select[@id='movie']//option[position() > 1]"));
+        $domNodeList = $agent->ScrapeSite($link);
+
+        $films = Array();
+
+        foreach ($domNodeList as $domNode) {
+            $domNode = $this->GetTypeDOMNode($domNode);
+            array_push
+            (
+                $films,
+                ['film' => $domNode->nodeValue, 'value' => $domNode->attributes->getNamedItem('value')->nodeValue]
+            );
+        }
+        return $films;
     }
 }
