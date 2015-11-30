@@ -13,3 +13,9 @@ require_once("DOMNodelist.php");
 require_once("DOMXpath.php");
 require_once("Site.php");
 require_once("XpathQuery.php");
+
+require_once("dinner/DinnerStatus.php");
+require_once("dinner/DinnerStatusCollection.php");
+
+require_once("cinema/Status.php");
+require_once("cinema/StatusCollection.php");

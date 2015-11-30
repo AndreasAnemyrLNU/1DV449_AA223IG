@@ -62,7 +62,7 @@ class Day
             throw new \Exception('A name can\'t consist of Zero letters');
 
         if(count($name) > self::$nameMaxLength)
-            echo count($name);
+            //echo count($name);
             //throw new \Exception('Max length for a name of Person is ' . self::$nameMaxLength);
 
             return $name;

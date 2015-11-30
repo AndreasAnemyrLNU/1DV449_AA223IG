@@ -48,10 +48,16 @@ class Agent
         return $this->scrapedData;
     }
 
-    public function ScrapeSite($path = "")
+    public function ScrapeSite($path = "", $isJson = false)
     {
 
         $this->scrapedData = $this->m_curl->CurlIt($path);
+
+        if($isJson)
+        {
+            return $this->scrapedData;
+        }
+
         $domNodeList = $this->result = $this->CreateDomNodeListFromScrapedDataWithXpathQuery();
         return $domNodeList;
     }

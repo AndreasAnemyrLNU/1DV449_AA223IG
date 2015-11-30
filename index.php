@@ -20,8 +20,5 @@ $master = new \controller\Master();
 $master->DoApp();
 
 
-//$singlePage = new \view\SinglePage();
-//$singlePage->GetHTML($returnenViewFromController);
-
-
-//phpinfo();
+$body = $singlePage = new \view\SinglePage();
+echo $singlePage->GetHTML($body);

@@ -16,7 +16,8 @@ class DOMDOMDocument
     public function __construct($result)
     {
         $this->m_domDocument = new \DOMDocument();
-        $this->m_domDocument->loadHTML($result);
+
+        @$this->m_domDocument->loadHTML($result);
     }
 
     public function GetDOMDocument()

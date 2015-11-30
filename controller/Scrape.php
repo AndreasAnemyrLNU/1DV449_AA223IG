@@ -10,6 +10,8 @@ namespace controller;
 
 
 
+use model\CinemaStatus;
+
 class Scrape
 {
     private $PersonCollection;
@@ -27,6 +29,9 @@ class Scrape
             $this->DoScrapeCalendar();
 
             $this->DoScrapeCinema();
+
+            $this->DoScrapeDinner();
+
     }
 
     private function DoScrapeCalendar()
@@ -71,12 +76,7 @@ class Scrape
             $this->PersonCollection->AddPerson($person);
         }
 
-        var_dump($this->PersonCollection->GetPersons()[0]->GetDayCollection());
-    }
-
-    private function GetTypeDOMNode(\DOMNode $DOMNode)
-    {
-        return $DOMNode;
+        //var_dump($this->PersonCollection->GetPersons()[0]->GetDayCollection());
     }
 
     private function DoScrapeCinema()
@@ -91,12 +91,62 @@ class Scrape
         $link = $domNode->nodeValue;
 
         $days   = $this->GetDaysInFormForDoScrapeCinema($agent, $link);
-        $films  = $this->GetFilmsInFormForDoScrapeCinema($agent, $link);
-
-        var_dump($days);
-        var_dump($films);
+        $movies  = $this->GetFilmsInFormForDoScrapeCinema($agent, $link);
 
 
+        foreach($days as $day)
+        {
+
+            $statusCollection = new \model\CinemaStatusCollection();
+
+            foreach($movies as $movie)
+            {
+                $url = "$link/check?day=" . $day['value'] . '&movie=' . $movie['value'];
+
+                $response = $agent->ScrapeSite($url, true);
+
+                $json = json_decode($response, true);
+
+                for($i = 0; $i < count($json); $i++)
+                {
+                    $status = new \model\CinemaStatus
+                    (
+                        $json[$i]['status'],
+                        $json[$i]['time'],
+                        $json[$i]['movie']
+                    );
+
+                    $statusCollection->AddStatus($status);
+                }
+            }
+
+            //print_r($statusCollection);
+        }
+    }
+
+    private function DoScrapeDinner()
+    {
+        $agent = new \model\Agent($this->site);
+        $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[3]/a/@href"));
+        $domNodeList = $agent->ScrapeSite();
+
+        $domNode = $domNodeList->item(0);
+        $domNode = $this->GetTypeDOMNode($domNode);
+        //[host]:[port]/dinner/
+        $link = $domNode->nodeValue;
+
+        // Only get if is available!
+        $agent->SetXpathQuery(new \model\XpathQuery("//input[@name='group1']"));
+        $domNodeList = $agent->ScrapeSite($link);
+
+        foreach($domNodeList as $domNode)
+        {
+            $domNode = $this->GetTypeDOMNode($domNode);
+
+            $value = $domNode->attributes->getNamedItem('value')->nodeValue;
+            $day    = substr($value, 0, 3);
+            $time   = substr($value, 3, 4);
+        }
     }
 
     // Used for /Calendar/
@@ -141,5 +191,10 @@ class Scrape
             );
         }
         return $films;
+    }
+
+    private function GetTypeDOMNode(\DOMNode $DOMNode)
+    {
+        return $DOMNode;
     }
 }
