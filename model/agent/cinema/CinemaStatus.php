@@ -11,28 +11,35 @@ namespace model;
 
 class CinemaStatus
 {
+    private $movie;
+    private $name;
     private $status;
     private $time;
-    private $movie;
 
-    public function __construct($status, $time, $movie)
+    public function __construct($name, $status, $time, $movie)
     {
-        $this->status = $status;
-        $this->time = $time;
-        $this->movie = $movie;
+        $this->movie        = $movie;
+        $this->name         = $name;
+        $this->status       = $status;
+        $this->time         = $time;
     }
 
-    public function getStatus()
+    public function GetName()
+    {
+        return $this->name;
+    }
+
+    public function GetStatus()
     {
         return $this->status;
     }
 
-    public function getTime()
+    public function GetTime()
     {
         return $this->time;
     }
 
-    public function getMovie()
+    public function GetMovie()
     {
         return $this->movie;
     }

@@ -10,15 +10,27 @@ namespace model;
 
 class CinemaStatusCollection
 {
-    private $statusCollection;
+    private $cinemaStatusCollection;
+
+    private $nameOfCollection;
+
+    public function SetNameOfCollection($nameOfCollection)
+    {
+        $this->nameOfCollection = $nameOfCollection;
+    }
+
+    public function GetNameOfCollection()
+    {
+        return $this->nameOfCollection;
+    }
 
     public function AddStatus(\model\CinemaStatus $status)
     {
-        $this->statusCollection[] = $status;
+        $this->cinemaStatusCollection[] = $status;
     }
 
-    public function getStatusCollection()
+    public function GetCollection()
     {
-        return $this->statusCollection;
+        return $this->cinemaStatusCollection;
     }
 }

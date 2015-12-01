@@ -43,8 +43,12 @@ class SinglePage
             </div>
             <div class='container'>
                 <div class='row'>
-                        {$this->view->GetAvailableCalendar()->GetHTML()}
-                        {$this->view->GetCinemaCalendar()->GetHTML()}
+                    {$this->view->GetAvailableCalendar()->GetHTML()}
+                </div>
+            </div>
+            <div class='container'>
+                <div class='row'>
+                    {$this->view->GetCinemaCalendar()->GetHTML()}
                 </div>
             </div>
             <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script> -->

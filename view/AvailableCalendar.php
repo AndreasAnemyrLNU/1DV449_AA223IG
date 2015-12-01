@@ -55,8 +55,8 @@ class AvailableCalendar
     private function RenderClassRegardingBooleanValuenInIsAvailable($isAvailable)
     {
         if($isAvailable)
-            return "class='danger '";
-        return "class=info";
+            return "class='success'";
+        return "class='danger'";
     }
 
     private function RenderPersonsTable(\model\Person $person)

@@ -93,6 +93,8 @@ class Scrape
 
     private function DoScrapeCinema()
     {
+        $cinemaStatusCollectionArray = Array();
+
         $agent = new \model\Agent($this->site);
         $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[2]/a/@href"));
         $domNodeList = $agent->ScrapeSite();
@@ -110,6 +112,7 @@ class Scrape
         {
 
             $cinemaStatusCollection = new \model\CinemaStatusCollection();
+            $cinemaStatusCollection->SetNameOfCollection($day['day']);
 
             foreach($movies as $movie)
             {
@@ -123,6 +126,7 @@ class Scrape
                 {
                     $status = new \model\CinemaStatus
                     (
+                        $movie['film'],
                         $json[$i]['status'],
                         $json[$i]['time'],
                         $json[$i]['movie']
@@ -130,8 +134,9 @@ class Scrape
                     $cinemaStatusCollection->AddStatus($status);
                 }
             }
-            return $cinemaStatusCollection;
+            $cinemaStatusCollectionArray[] = $cinemaStatusCollection;
         }
+        return $cinemaStatusCollectionArray;
     }
 
     private function DoScrapeDinner()

@@ -37,9 +37,4 @@ class CalendarDayStatusCollection
     {
         return $this->calendarDayStatusCollection;
     }
-
-    private function GetTypCalendarDayStatus(\model\CalendarDayStatus $calendarDayStatus)
-    {
-        return $calendarDayStatus;
-    }
 }
