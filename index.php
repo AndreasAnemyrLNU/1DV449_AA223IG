@@ -10,15 +10,17 @@
 // Module "Friends"
 require_once("./model/agent/load.php");
 require_once("./model/friends/load.php");
+
 // Load Views
-require_once("./view/SinglePage.php");
+require_once("./view/load.php");
+
 // Load Controllers
 require_once("./controller/load.php");
 
 
 $master = new \controller\Master();
-$master->DoApp();
+$fullView = $master->DoApp();
 
 
-$body = $singlePage = new \view\SinglePage();
-echo $singlePage->GetHTML($body);
+$singlePage = new \view\SinglePage($fullView);
+echo $singlePage->GetHTML();

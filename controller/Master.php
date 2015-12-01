@@ -9,7 +9,7 @@
 namespace controller;
 
 
-use model\DOMXpath;
+//use model\DOMXpath;
 
 class Master
 {
@@ -17,6 +17,13 @@ class Master
     {
         $scrape = new \controller\Scrape();
         $scrape->DoScrape();
-    }
 
+        $fullView = new \view\FullView
+        (
+            new \view\AvailableCalendar($scrape->GetPersonCollection()),
+            new \view\CinemaCalendar($scrape->GetCinemaStatusCollection())
+        );
+
+        return $fullView;
+    }
 }

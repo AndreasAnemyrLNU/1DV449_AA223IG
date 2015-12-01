@@ -9,7 +9,7 @@
 namespace model;
 
 
-class Day
+class CalendarDayStatus
 {
     // #0 is Monday, #1 is Tuesday .. #6 is Sunday
     private $nr;
@@ -61,11 +61,11 @@ class Day
         if(count_chars($name) === 0)
             throw new \Exception('A name can\'t consist of Zero letters');
 
-        if(count($name) > self::$nameMaxLength)
+        //if(count($name) > self::$nameMaxLength)
             //echo count($name);
             //throw new \Exception('Max length for a name of Person is ' . self::$nameMaxLength);
 
-            return $name;
+        return $name;
     }
 
     public function GetIsAvailable()

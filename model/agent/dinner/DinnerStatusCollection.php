@@ -11,5 +11,10 @@ namespace model;
 
 class DinnerStatusCollection
 {
+    private $dinnerStatusCollection;
 
+    public function AddDinnerStatus(\model\DinnerStatus $dinnerStatus)
+    {
+        $this->dinnerStatusCollection[] = $dinnerStatus;
+    }
 }

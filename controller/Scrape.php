@@ -14,28 +14,42 @@ use model\CinemaStatus;
 
 class Scrape
 {
-    private $PersonCollection;
-
+    private $cinemaStatusCollection;
+    private $dinnerStatusCollection;
+    private $personCollection;
     private $site;
+
+    public function GetCinemaStatusCollection()
+    {
+        return $this->cinemaStatusCollection;
+    }
+
+    public function GetDinnerStatusCollection()
+    {
+        return $this->dinnerStatusCollection;
+    }
+
+    public function GetPersonCollection()
+    {
+        return $this->personCollection;
+    }
 
     public function __construct()
     {
         $this->site = new \model\Site("10.0.2.2", "weekend-booking-web-site", 8080);
-        $this->PersonCollection = new \model\PersonCollection();
     }
 
     public function DoScrape()
     {
-            $this->DoScrapeCalendar();
-
-            $this->DoScrapeCinema();
-
-            $this->DoScrapeDinner();
-
+            $this->personCollection         = $this->DoScrapeCalendar();
+            $this->cinemaStatusCollection   = $this->DoScrapeCinema();
+            $this->dinnerStatusCollection   = $this->DoScrapeDinner();
     }
 
     private function DoScrapeCalendar()
     {
+        $personCollection = new \model\PersonCollection();
+
         //TODO start DRY code 999 here
         $agent = new \model\Agent($this->site);
         $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[1]/a/@href"));
@@ -63,20 +77,18 @@ class Scrape
             // scrapes "ok"
             $agent->SetXpathQuery(new \model\XpathQuery("/html/body/table/tbody/tr//td"));
 
-            $dayCollection = new \model\DayCollection();
+            $dayCollection = new \model\CalendarDayStatusCollection();
             // Friday
-            $dayCollection->AddDay(new \model\Day(4, 'Friday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[0]->nodeValue))));
+            $dayCollection->AddDay(new \model\CalendarDayStatus(4, 'Friday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[0]->nodeValue))));
             // Saturday
-            $dayCollection->AddDay(new \model\Day(5, 'Saturday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[1]->nodeValue))));
+            $dayCollection->AddDay(new \model\CalendarDayStatus(5, 'Saturday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[1]->nodeValue))));
             // Sunday
-            $dayCollection->AddDay(new \model\Day(6, 'Sunday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[2]->nodeValue))));
+            $dayCollection->AddDay(new \model\CalendarDayStatus(6, 'Sunday', $this->ConvertStringToBool(strtolower($agent->ScrapeSite($tmpLink)[2]->nodeValue))));
 
             $person = new \model\Person($name, $dayCollection);
-
-            $this->PersonCollection->AddPerson($person);
+            $personCollection->AddPerson($person);
         }
-
-        //var_dump($this->PersonCollection->GetPersons()[0]->GetDayCollection());
+        return $personCollection;
     }
 
     private function DoScrapeCinema()
@@ -97,7 +109,7 @@ class Scrape
         foreach($days as $day)
         {
 
-            $statusCollection = new \model\CinemaStatusCollection();
+            $cinemaStatusCollection = new \model\CinemaStatusCollection();
 
             foreach($movies as $movie)
             {
@@ -115,17 +127,17 @@ class Scrape
                         $json[$i]['time'],
                         $json[$i]['movie']
                     );
-
-                    $statusCollection->AddStatus($status);
+                    $cinemaStatusCollection->AddStatus($status);
                 }
             }
-
-            //print_r($statusCollection);
+            return $cinemaStatusCollection;
         }
     }
 
     private function DoScrapeDinner()
     {
+        $dinnerStatusCollection = new \model\DinnerStatusCollection();
+
         $agent = new \model\Agent($this->site);
         $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[3]/a/@href"));
         $domNodeList = $agent->ScrapeSite();
@@ -146,7 +158,18 @@ class Scrape
             $value = $domNode->attributes->getNamedItem('value')->nodeValue;
             $day    = substr($value, 0, 3);
             $time   = substr($value, 3, 4);
+
+            $dinnerStatusCollection->AddDinnerStatus
+            (
+              new \model\DinnerStatus
+              (
+                  $value,
+                  $time,
+                  $day
+              )
+            );
         }
+        return $dinnerStatusCollection;
     }
 
     // Used for /Calendar/

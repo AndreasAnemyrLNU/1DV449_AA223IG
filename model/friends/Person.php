@@ -12,28 +12,28 @@ namespace model;
 class Person
 {
 
-    private $dayCollection;
+    private $calendarDayStatusCollection;
 
     private $name;
 
-    public function __construct($name, \model\DayCollection $dayCollection)
+    public function __construct($name, \model\CalendarDayStatusCollection $calendarDayStatusCollection)
     {
         $this->name = $this->SetName($name);
 
-        $this->dayCollection = $this->SetDayCollection($dayCollection);
+        $this->calendarDayStatusCollection = $this->SetCalendarDayStatusCollection($calendarDayStatusCollection);
     }
 
-    public function GetDayCollection()
+    public function GetCalendarDayStatusCollection()
     {
-        return $this->dayCollection;
+        return $this->calendarDayStatusCollection;
     }
 
-    public function SetDayCollection($dayCollection)
+    public function SetCalendarDayStatusCollection($calendarDayStatusCollection)
     {
-        if(!$dayCollection instanceof \model\DayCollection)
+        if(!$calendarDayStatusCollection instanceof \model\CalendarDayStatusCollection)
             throw new \Exception('Instance must be of type \model\DayCollection');
 
-        return $dayCollection;
+        return $calendarDayStatusCollection;
     }
 
     public function GetName()

@@ -11,32 +11,40 @@ namespace view;
 
 class SinglePage
 {
-    private $body;
+    private $view;
 
-    public function __construct($body = "")
+    public function __construct(\view\FullView $view)
     {
-        $this->body = $body;
+        $this->view = $view;
     }
 
-    public function GetHTML($body)
+    public function GetHTML()
     {
         return
         "
         <!DOCTYPE html>
         <html lang='sv'>
+            <title>My WebCrawler!</title>
             <head>
                 <meta charset='utf-8'>
                 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
                 <meta name='viewport' content='width=device-width, initial-scale=1'>
                 <link rel='stylesheet' href='/view/bootstrap-3.3.6-dist/css/bootstrap.css'>
                 <link rel='stylesheet' href='/view/bootstrap-3.3.6-dist/css/bootstrap-theme.css'
-                <title>My WebCrawler!</title>
+
             </head>
             <body>
-
+            <div class='jumbotron navbar-inverse navbar-static-top'>
+                <div>
+                    <nav>
+                        <h3 class='text-info text-muted text-center'>Time for party calender....</h3>
+                    </nav>
+                </div>
+            </div>
             <div class='container'>
-                <div class ='panel panel-default'>
-                    <h1>sadfsadfsdaf<h1>
+                <div class='row'>
+                        {$this->view->GetAvailableCalendar()->GetHTML()}
+                        {$this->view->GetCinemaCalendar()->GetHTML()}
                 </div>
             </div>
             <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script> -->
