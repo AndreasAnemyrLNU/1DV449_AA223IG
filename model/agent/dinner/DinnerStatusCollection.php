@@ -17,4 +17,12 @@ class DinnerStatusCollection
     {
         $this->dinnerStatusCollection[] = $dinnerStatus;
     }
+
+    public function GetDinnerStatusCollection()
+    {
+        return $this->dinnerStatusCollection;
+    }
+
+
+
 }

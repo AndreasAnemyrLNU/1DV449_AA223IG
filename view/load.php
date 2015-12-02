@@ -7,6 +7,7 @@
  */
 
 require_once("AvailableCalendar.php");
+require_once("BookingTable.php");
 require_once("CinemaCalendar.php");
 require_once("FullView.php");
 require_once("SinglePage.php");

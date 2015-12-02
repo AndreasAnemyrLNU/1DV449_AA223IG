@@ -12,14 +12,24 @@ namespace view;
 class CinemaCalendar
 {
     private $cinemaStatusCollectionArray;
+    private $personCollection;
+    private $dinnerStatusCollection;
 
-    public function __construct(Array $cinemaStatusCollectionArray)
+    public function __construct
+    (
+        Array $cinemaStatusCollectionArray,
+        \model\PersonCollection $personCollection,
+        \model\DinnerStatusCollection $dinnerStatusCollection
+    )
     {
         $this->cinemaStatusCollectionArray  = $cinemaStatusCollectionArray;
+        $this->personCollection = $personCollection;
+        $this->dinnerStatusCollection = $dinnerStatusCollection;
     }
 
     public function GetHTML()
     {
+
         $html = "";
         $html.= "<div class='row'>";
         $html.= "<div class='jumbotron'>";
@@ -35,11 +45,14 @@ class CinemaCalendar
             <div class='col-sm-6 col-lg-6 col-md-6 col-xs-6'>
                 <div class='panel panel-default'>
                     <div class='panel-heading panel-info btn-success'>
-                       <h3>{$cinemaStatusCollection->GetNameOfCollection()}</h3>
+                       <h3>{$cinemaStatusCollection->GetNameOfCollection()['name']}</h3>
+                       <div class='well'>
+                        {$this->RenderHeadingPanel($cinemaStatusCollection->GetNameOfCollection()['id'])}
+                       </div>
                     </div>
                     <div class='panel-body'>
                         <table class='table table-responsive table-striped'>
-                            {$this->RenderTable($cinemaStatusCollection)}
+                            {$this->RenderTable($cinemaStatusCollection, $cinemaStatusCollection->GetNameOfCollection()['name'])}
                         </table>
                     </div>
                 </div>
@@ -53,7 +66,7 @@ class CinemaCalendar
         return $html;
     }
 
-    private function RenderTable(\model\CinemaStatusCollection $cinemaStatusCollection)
+    private function RenderTable(\model\CinemaStatusCollection $cinemaStatusCollection, $day)
     {
         $cinemaStatusCollection =$this->GetTypeCinemaStatusCollection($cinemaStatusCollection);
 
@@ -66,21 +79,56 @@ class CinemaCalendar
             <tbody>
                 <td class='text-left'>{$cinemaStatus->GetTime()}</td>
                 <td class='text-right'>{$cinemaStatus->GetName()}</td>
-                <td>{$this->RenderBookButton($cinemaStatus->GetStatus())}</td>
+                <td>{$this->RenderBookButton($cinemaStatus, $day)}</td>
             </tbody>
             ";
         }
         return $html;
     }
 
-    private function RenderBookButton($status)
+    private function RenderBookButton(\model\CinemaStatus $status, $day)
     {
-        if($status)
+        if($status->GetStatus())
         {
-            return
-            "
-                <a class='btn btn-block btn-success'>Book Now!</a>
-            ";
+            if(isset($_GET['start'])  &&  isset($_GET['movie']) && isset($_GET['day']))
+            {
+                if($_GET['start'] === $status->GetTime() && $_GET['movie'] === $status->GetMovie() && $_GET['day'] == $day)
+                {
+                    return
+                    "
+                    <a
+                        class='btn btn-block btn-primary'
+                        href='?start={$status->GetTime()}&movie={$status->GetMovie()}&day=$day'
+                    >
+                        Reserved!
+                    </a>
+                    ";
+                }
+                else
+                {
+                    return
+                        "
+                    <a
+                        class='btn btn-block btn-success'
+                        href='?start={$status->GetTime()}&movie={$status->GetMovie()}&day=$day'
+                    >
+                        Book Now!
+                    </a>
+                ";
+                }
+            }
+            else
+            {
+                return
+                "
+                    <a
+                        class='btn btn-block btn-success'
+                        href='?start={$status->GetTime()}&movie={$status->GetMovie()}&day=$day'
+                    >
+                        Book Now!
+                    </a>
+                ";
+            }
         }
         else
         {
@@ -99,5 +147,38 @@ class CinemaCalendar
     private function GetTypeCinemaStatusCollection(\model\CinemaStatusCollection $cinemaStatusCollection)
     {
         return $cinemaStatusCollection;
+    }
+
+    private function RenderHeadingPanel($id)
+    {
+
+        $allPersonIsAvailable =$this->personCollection->GetTheDaysWhenAllPersonsIsAvailable()[$id];
+
+        if($allPersonIsAvailable == true)
+        {
+
+            if(isset($_GET['check']))
+            {
+                if($_GET['check'] == true)
+                {
+                    $booking = new \view\BookingTable($this->dinnerStatusCollection);
+                    return $booking->GetHTML();
+                }
+            }
+
+            $url = $_SERVER['REQUEST_URI'] . '&check=true';
+
+            return
+            "
+                <a href='$url' class='btn btn-block btn-warning'>Check Zekes NOW!</a>
+            ";
+        }
+        else
+        {
+            return
+                "
+                <a class='btn btn-block btn-warning disabled'>Zekes not a good idea!</a>
+            ";
+        }
     }
 }

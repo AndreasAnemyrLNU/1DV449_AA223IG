@@ -21,4 +21,19 @@ class DinnerStatus
         $this->time     = $time;
         $this->day      = $day;
     }
+
+    public function GetValue()
+    {
+        return $this->value;
+    }
+
+    public function GetTime()
+    {
+        return $this->time;
+    }
+
+    public function GetDay()
+    {
+        return $this->day;
+    }
 }

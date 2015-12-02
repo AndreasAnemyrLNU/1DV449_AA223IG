@@ -20,8 +20,16 @@ class Master
 
         $fullView = new \view\FullView
         (
-            new \view\AvailableCalendar($scrape->GetPersonCollection()),
-            new \view\CinemaCalendar($scrape->GetCinemaStatusCollection())
+            new \view\AvailableCalendar
+            (
+                $scrape->GetPersonCollection()
+            ),
+            new \view\CinemaCalendar
+            (
+                $scrape->GetCinemaStatusCollection(),
+                $scrape->GetPersonCollection(),
+                $scrape->GetDinnerStatusCollection()
+            )
         );
 
         return $fullView;

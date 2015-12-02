@@ -21,7 +21,39 @@ class CinemaStatusCollection
 
     public function GetNameOfCollection()
     {
-        return $this->nameOfCollection;
+        $day = Array();
+
+        if($this->nameOfCollection == 'Fredag')
+        {
+            return
+            $day =
+            [
+                'name' => 'Friday',
+                'id'        => 4
+            ];
+        }
+
+
+        if($this->nameOfCollection == 'Lördag')
+        {
+            return
+            $day =
+            [
+                'name' => 'Saturday',
+                'id'        => 5
+            ];
+        }
+        if($this->nameOfCollection == 'Söndag')
+        {
+            return
+            $day =
+            [
+                'name' => 'Sunday',
+                'id'        => 6
+            ];
+        }
+
+
     }
 
     public function AddStatus(\model\CinemaStatus $status)
