@@ -6,5 +6,6 @@
  * Time: 21:58
  */
 
+require_once("Booking.php");
 require_once("Master.php");
 require_once("Scrape.php");

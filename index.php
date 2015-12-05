@@ -17,10 +17,18 @@ require_once("./view/load.php");
 // Load Controllers
 require_once("./controller/load.php");
 
+try
+{
+    $master = new \controller\Master();
+    $fullView = $master->DoApp();
 
-$master = new \controller\Master();
-$fullView = $master->DoApp();
+    $singlePage = new \view\SinglePage($fullView);
+    echo $singlePage->GetHTML();
 
+}
+catch (Exception $e){
 
-$singlePage = new \view\SinglePage($fullView);
-echo $singlePage->GetHTML();
+    $singlePage = new \view\SinglePage(new \view\FullView(null,null, new \view\SiteConfigurator('Last loaded setting in form...')));
+    echo $singlePage->GetHTML($errorMessage = $e->getMessage());
+}
+

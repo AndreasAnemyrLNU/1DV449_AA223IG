@@ -21,7 +21,7 @@ class BookingTable
     public function GetHTML()
     {
         $html = "";
-        $html.= "<form method='get'>";
+        $html.= "<form method='post' action='/?action=booking'>";
         foreach($this->dinnerStatusCollection->GetDinnerStatusCollection() as $dinnerStatus)
         {
             $dinnerStatus = $this->GetTypeDinnerStatus($dinnerStatus);
@@ -40,13 +40,13 @@ class BookingTable
         }
         $html.=
         "
-        <div class='form-group'>
+          <div class='form-group'>
                 <label for='username'>Username at Zekes</label>
-                <input type='text' class='form-control' id='username' placeholder='Username'>
-            </div>
+                <input type='text' class='form-control' name='username' id='username' placeholder='username'>
+          </div>
           <div class='form-group'>
                 <label for='password'>Password at Zekes</label>
-                <input type='password' class='form-control' id='password' placeholder='Password'>
+                <input type='password' class='form-control' name='password' id='password' placeholder='password'>
           </div>
           <button type='submit' class='btn btn-default'>Bookt Table Now!</button>
         </form>
@@ -67,8 +67,8 @@ class BookingTable
         "
         <div class='radio'>
             <label>
-                <input type='radio' name='optionsRadios' id='optionsRadios{$dinnerStatus->GetValue()}' value='option{$dinnerStatus->GetValue()}' checked>
-                Dinner at Zekes {$timeArr['start']}:00 - {$timeArr['end']}:00
+                <input type='radio' name='group1' id={$dinnerStatus->GetValue()}' value='{$dinnerStatus->GetValue()}' checked>
+                Dinner at Zekes {$timeArr['start']}:00 - {$timeArr['end']}:00 ({$this->ParseDay($dinnerStatus->GetDay())})
             </label>
         </div>
         ";

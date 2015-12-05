@@ -13,13 +13,17 @@ class SinglePage
 {
     private $view;
 
+    private $errorMessage;
+
     public function __construct(\view\FullView $view)
     {
         $this->view = $view;
     }
 
-    public function GetHTML()
+    public function GetHTML($errorMessage = false)
     {
+        $this->errorMessage =  $errorMessage;
+
         return
         "
         <!DOCTYPE html>
@@ -42,21 +46,53 @@ class SinglePage
                 </div>
             </div>
             <div class='container'>
+                <div class='panel panel-primary'>
+                    <!-- when exception exists.....-->
+                    {$this->HasErrorOccured()}
+                </div>
                 <div class='row'>
-                    {$this->view->GetAvailableCalendar()->GetHTML()}
+                    {$this->view->GetSiteConfigurator()->GetHTML()}
+                </div>
+                <div class='row'>
+                    {$this->ReturnEmptyStringIfObjectIsNull($this->view->GetAvailableCalendar())}
                 </div>
             </div>
             <div class='container'>
                 <div class='row'>
-                    {$this->view->GetCinemaCalendar()->GetHTML()}
+                    {$this->ReturnEmptyStringIfObjectIsNull($this->view->GetCinemaCalendar())}
                 </div>
             </div>
-            <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script> -->
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
             <script src='/view/bootstrap-3.3.6-dist/js/bootstrap.js'></script>
             </body>
         </html>
         ";
     }
 
+    private function ReturnEmptyStringIfObjectIsNull($object)
+    {
+        if($object === null)
+        {
+            return "";
+        }
+        else
+        {
+            echo $object->GetHTML();
+        }
+    }
+
+    private function HasErrorOccured()
+    {
+        if($this->errorMessage !== false)
+        {
+            return
+            "
+            <div class='panel-heading'>An error occured!</div>
+            <div class='panel-body'>
+                    <p class='text-muted text-capitalize'>{$this->errorMessage}</p>
+            </div>
+            ";
+        }
+    }
 
 }

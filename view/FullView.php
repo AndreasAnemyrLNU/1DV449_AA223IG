@@ -13,6 +13,7 @@ class FullView
 {
     private $availableCalendar;
     private $cinemaCalendar;
+    private $siteConfigurator;
 
     public function GetAvailableCalendar()
     {
@@ -24,13 +25,20 @@ class FullView
         return $this->cinemaCalendar;
     }
 
+    public function GetSiteConfigurator()
+    {
+        return $this->siteConfigurator;
+    }
+
     public function __construct
     (
-        \view\AvailableCalendar $availableCalendar,
-        \view\CinemaCalendar $cinemaCalendar
+        \view\AvailableCalendar $availableCalendar = null,
+        \view\CinemaCalendar $cinemaCalendar = null,
+        \view\SiteConfigurator $siteConfigurator = null
     )
     {
         $this->availableCalendar    = $availableCalendar;
         $this->cinemaCalendar       = $cinemaCalendar;
+        $this->siteConfigurator     = $siteConfigurator;
     }
 }

@@ -23,7 +23,7 @@ class AvailableCalendar
         $html = "";
         $html.= "<div class='row'>";
         $html.= "<div class='jumbotron'>";
-        $html.= "<p class='text-muted text-center'>Available is marked with blue and busy is red!</p>";
+        $html.= "<p class='text-muted text-center'>Available is marked with <span class='text-capitalize text-success'>green</span> and busy is <span class='text-capitalize text-danger'>red</span>!</p>";
         foreach($this->personCollection->GetPersons() as $person)
         {
             $person =$this->GetTypePerson($person);

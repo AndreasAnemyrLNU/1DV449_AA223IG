@@ -34,9 +34,9 @@ class Scrape
         return $this->personCollection;
     }
 
-    public function __construct()
+    public function __construct(\model\Site $site)
     {
-        $this->site = new \model\Site("10.0.2.2", "weekend-booking-web-site", 8080);
+        $this->site = $site;
     }
 
     public function DoScrape()
@@ -56,6 +56,12 @@ class Scrape
         $domNodeList = $agent->ScrapeSite();
 
         $domNode = $domNodeList[0];
+
+        if($domNode === null)
+        {
+            throw new \Exception('Maybe setting is wrong. Couldn\'t not load any html to be Xpathed....');
+        }
+
         $domNode = $this->GetTypeDOMNode($domNode);
         //localhost:8080/calendar/
         $link = $domNode->nodeValue;
