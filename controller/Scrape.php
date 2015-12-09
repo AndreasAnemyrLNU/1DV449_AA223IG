@@ -55,7 +55,7 @@ class Scrape
         $agent->SetXpathQuery(new \model\XpathQuery("/html/body/ol/li[1]/a/@href"));
         $domNodeList = $agent->ScrapeSite();
 
-        $domNode = $domNodeList[0];
+        @$domNode = $domNodeList->item(0);
 
         if($domNode === null)
         {

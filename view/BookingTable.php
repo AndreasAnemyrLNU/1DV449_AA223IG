@@ -20,8 +20,11 @@ class BookingTable
 
     public function GetHTML()
     {
+
+        $url = $_SERVER['REQUEST_URI'] . '&action=booking';
+
         $html = "";
-        $html.= "<form method='post' action='/?action=booking'>";
+        $html.= "<form method='post' action='$url'>";
         foreach($this->dinnerStatusCollection->GetDinnerStatusCollection() as $dinnerStatus)
         {
             $dinnerStatus = $this->GetTypeDinnerStatus($dinnerStatus);
