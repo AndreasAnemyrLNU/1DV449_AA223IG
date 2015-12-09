@@ -2,6 +2,9 @@
 
 1DV449 - Webbteknik II
 
+Publicerad:
+http://xponeras.se/1dv449/scrape/
+
 ###Finns det några etiska aspekter vid webbskrapning. Kan du hitta något rättsfall?
 Det finns en ganska intressant och uppmärksammad historia om webskarpaning av Ebay i början av 2000-talet.
 2009 vann facebook en tvist som gällde webbskrapning. Ett problem har varit att det ansetts att text "do not scrape us" inte ansetts tillräcklig...
