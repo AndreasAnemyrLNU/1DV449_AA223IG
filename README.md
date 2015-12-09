@@ -5,7 +5,8 @@
 ###Finns det några etiska aspekter vid webbskrapning. Kan du hitta något rättsfall?
 Det finns en ganska intressant och uppmärksammad historia om webskarpaning av Ebay i början av 2000-talet.
 2009 vann facebook en tvist som gällde webbskrapning. Ett problem har varit att det ansetts att text "do not scrape us" inte ansetts tillräcklig...
-Källa http://resources.distilnetworks.com/h/i/53822104-is-web-scraping-illegal-depends-on-what-the-meaning-of-the-word-is-is/181642
+
+[Källa http://resources.distilnetworks.com/h/i/53822104-is-web-scraping-illegal-depends-on-what-the-meaning-of-the-word-is-is/181642]
 
 ###Finns det några riktlinjer för utvecklare att tänka på om man vill vara "en god skrapare" mot serverägarna?
 Att följa "terms of conditions" och robots.txt bör vara tillräckligt.
