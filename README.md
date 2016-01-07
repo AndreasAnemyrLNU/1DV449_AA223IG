@@ -24,4 +24,20 @@ Filen "bör" vägleda hur en spindel bör/ska/får agera enligt de direktiv som åter
 ###Komplettera #1
 #####Big Data
 
+I dagen samhälle finns miljontals användare av internet. Med den teknik som idag finns i bla smartphones är det en "piece of cake" att samla in mängder av information. Man skulle kunna säga att alla användare lämnar "breadcrumbs" efter sig och att det pga av detta är möjligt att använda dessa spår för att helt enkelt "tracka" användare. Själv kan jag tycka att det intressanta är att man kan använda denna infromationen i olika former av algoritmer. Big Data med dagens möjligheter, kanske främst genom att så många ständigt är uppkopplade, ger dagens utvecklar otaliga möjligheter för att utveckla nya typer av applikationer och algoritmer. Något som för många för bara femton år sedan vore fullständigt omöjligt. Självklart skulle dessa applikationer både kunnna grunda sig på "realtidsdata" genererat från användare, men även historiska data över längre tid som sparats persistent.
+Inte sällan påpekas "det otäcka" i att den personliga integriteten eventuellt skulle kunna påverkas negativt. Som utvecklar ser jag det som "vårt" ansvar att förvalta möjligheter som big data ger och utveckla och forma internet i gott syfte.
+
+Källor:
+https://www.youtube.com/watch?v=buJUojhs80E
+http://www.svd.se/big-data-gor-om-var-varld-i-grunden_8076288
+
 #####Web of Things
+
+Web of things är tänkt att vara ett applikationslager (så som exempelvis webben är på internet) för att "web of things" på standardiserade sätt ska kunna kommunicera med varandra. Internet of things som idé är inte ny. Ganska länge har man pratat om intelligenta hem osv. Det smart med filosofin bakom "web of things" är att ett applikationslager genom http och diverse webtekniker på standardiserade sätt ska kunna kommunicera med varandra. Istället för att olika företag utvecklar sina egna lösningar så blir det viktigt att följa de riktlinjer applikationslagret anger. Allt för att göra integreringar av diverse integreringar effektivare och intressantare.
+
+Lite kuriosa som ligger nära i ämnet här:
+År 2009 höll Tim Berners-Less ett kort föredrag om länkat data. Han nämner att han ursprungligen utvecklade http för att få ett effektivare sätt att hantera dokument. Dokument var således den ursprungliga ändamålet för protokollet. Nu efter tjugo år har saker kanske på ett sätt inte direkt förändrats, däremot så är det som det ofta är. Nya idéer och insikter kommer med tiden. Tim nästintill håller ett brandtal om att vi ska dela data med varandra. Intressant är när han nämner Hans Rosling använt länkat data från flera olika källor via http för att generera ut data baserat från flera olika datakällor, men som får en naturlig koppling genom länkarna som http erbjuder.
+Internet idag består inte endast vad som var tanken från början, dvs dokument. Produkter, människor och platser mm. är idag saker som återfinns på nätet. Vi har ett internet av saker som ger möjligheter att generera nya dokument och applikationer mm. Tim Berners-Lee nämner några viktiga saker i föredraget: Bl.a nämner han vikten av att dela med sig data. Gärna genom ett lämpligt format såsom json
+
+Källor:
+http://www.ted.com/talks/tim_berners_lee_on_the_next_web#t-484161
