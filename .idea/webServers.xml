@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="215aee85-d0c5-4868-b9a6-dc49cc0758cb" name="http://www.xponeras.se/1dv449/scrape" url="http://ftp.xponeras.se">
+        <fileTransfer host="ftp.xponeras.se" port="21" username="scrape@xponeras.se">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

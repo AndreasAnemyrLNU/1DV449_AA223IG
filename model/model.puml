@@ -1,0 +1,39 @@
+@startuml
+
+
+class model.agent.Agent{
+-site
+-expression
+__construct(\model\Site site)
++ScrapeSite()
+}
+
+class model.agent.Curl{
+-hande
+-site
+-scrapedData
+__construct(\model\Site site)
++CurlIT():string
+}
+
+class model.agent.DOMDocument{
+
+}
+
+class model.agent.Expression
+class model.agent.Site
+class model.Xpath
+class model.XpathQuery
+
+
+class model.friends.Calendar
+class model.friends.Cinema
+class model.friends.Event
+class model.friends.person
+class model.friends.Film
+class model.friends.Restaurant
+class model.friends.Table
+
+model.agent.Agent ..> model.agent.Curl
+
+@enduml

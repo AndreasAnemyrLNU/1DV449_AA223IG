@@ -20,3 +20,8 @@ Applickationen är utvecklad med ett objektsorienterat tänk med många klasser som
 
 ###Vad kan robots.txt spela för roll?
 Filen "bör" vägleda hur en spindel bör/ska/får agera enligt de direktiv som återfinns i filen. Viktigt är att filen finns på plats, även om den är tom. Ännu viktigare är att förstå att en utvecklare kan igenorera en rotbots-fil. Likaså är det viktigt att betona att man inte bör "dölja" hemligt innehåll genom denna fil. Det vore ett "perfekt" sätt att hitta information på ett simpelt sätt.
+
+###Komplettera #1
+#####Big Data
+
+#####Web of Things

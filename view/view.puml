@@ -1,0 +1,7 @@
+@startuml
+
+class view.SinglePage{
+getHTML()
+}
+
+@enduml

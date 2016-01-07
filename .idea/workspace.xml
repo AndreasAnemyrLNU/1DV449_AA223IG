@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a14c9d4c-0925-40d3-b273-8c7d7fed02af" name="Default" comment="" />
+    <ignored path="scrape.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="ComposerSettings" addDependencyOptions="">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharPath>C:\Users\AndreasAnemyr\Documents\courses\1dv449\puphpet\zYCF72\scrape\composer.phar</pharPath>
+    <phpPath>php.exe</phpPath>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="scrape" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39473686">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Component" />
+        <option value="UML Class" />
+        <option value="Html5" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/view/view.puml" />
+        <option value="$PROJECT_DIR$/model/agent/Expression.php" />
+        <option value="$PROJECT_DIR$/model/agent/Agents.php" />
+        <option value="$PROJECT_DIR$/model/agent/Site.php" />
+        <option value="$PROJECT_DIR$/model/agent/DomDocument.php" />
+        <option value="$PROJECT_DIR$/scrapeApp.puml" />
+        <option value="$PROJECT_DIR$/model/model.puml" />
+        <option value="$PROJECT_DIR$/controller/controller.puml" />
+        <option value="$PROJECT_DIR$/model/agent/Xpath.php" />
+        <option value="$PROJECT_DIR$/model/agent/DOMDOMXpath.php" />
+        <option value="$PROJECT_DIR$/model/agent/DOMNodelist.php" />
+        <option value="$PROJECT_DIR$/model/agent/XpathQuery.php" />
+        <option value="$PROJECT_DIR$/model/agent/DOMXpath.php" />
+        <option value="$PROJECT_DIR$/model/agent/cookie.txt" />
+        <option value="$PROJECT_DIR$/model/agent/DOMDocument.php" />
+        <option value="$PROJECT_DIR$/model/friends/CollectionPerson.php" />
+        <option value="$PROJECT_DIR$/model/friends/DayCollection.php" />
+        <option value="$PROJECT_DIR$/model/agent/Agent.php" />
+        <option value="$PROJECT_DIR$/model/agent/cinema/Status.php" />
+        <option value="$PROJECT_DIR$/model/agent/DOMDOMDocument.php" />
+        <option value="$PROJECT_DIR$/view/index.html" />
+        <option value="$PROJECT_DIR$/model/friends/Day.php" />
+        <option value="$PROJECT_DIR$/model/agent/cinema/StatusCollection.php" />
+        <option value="$PROJECT_DIR$/model/friends/load.php" />
+        <option value="$PROJECT_DIR$/model/agent/calendar/DayCollection.php" />
+        <option value="$PROJECT_DIR$/model/agent/load.php" />
+        <option value="$PROJECT_DIR$/model/agent/calendar/CalendarDayStatus.php" />
+        <option value="$PROJECT_DIR$/model/friends/Person.php" />
+        <option value="$PROJECT_DIR$/model/agent/cinema/CinemaStatus.php" />
+        <option value="$PROJECT_DIR$/model/agent/calendar/CalendarDayStatusCollection.php" />
+        <option value="$PROJECT_DIR$/model/friends/PersonCollection.php" />
+        <option value="$PROJECT_DIR$/model/agent/cinema/CinemaStatusCollection.php" />
+        <option value="$PROJECT_DIR$/model/agent/dinner/DinnerStatusCollection.php" />
+        <option value="$PROJECT_DIR$/model/agent/dinner/DinnerStatus.php" />
+        <option value="$PROJECT_DIR$/controller/load.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/controller/Booking.php" />
+        <option value="$PROJECT_DIR$/view/load.php" />
+        <option value="$PROJECT_DIR$/view/FullView.php" />
+        <option value="$PROJECT_DIR$/view/Navigation.php" />
+        <option value="$PROJECT_DIR$/view/SiteConfigurator.php" />
+        <option value="$PROJECT_DIR$/controller/Master.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/model/agent/Curl.php" />
+        <option value="$PROJECT_DIR$/view/AvailableCalendar.php" />
+        <option value="$PROJECT_DIR$/controller/Scrape.php" />
+        <option value="$PROJECT_DIR$/view/CinemaCalendar.php" />
+        <option value="&lt;215aee85-d0c5-4868-b9a6-dc49cc0758cb&gt;/view/SinglePage.php" />
+        <option value="$PROJECT_DIR$/view/SinglePage.php" />
+        <option value="$PROJECT_DIR$/view/BookingTable.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="." />
+      <path value="/usr/share/php" />
+      <path value="/usr/share/pear" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="scrape">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrape" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model/agent/calendar" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="FullScreen" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AndreasAnemyr\Documents\courses\1dv449\puphpet\zYCF72\scrape\model\agent\calendar" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://scrape.dev/index.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="f9cfb4fe-1ed3-4e2b-b8e3-ba026a1c7bf7" server_name="http://scrape.dev">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a14c9d4c-0925-40d3-b273-8c7d7fed02af" name="Default" comment="" />
+      <created>1448366296352</created>
+      <option name="number" value="Default" />
+      <updated>1448366296352</updated>
+    </task>
+    <task id="LOCAL-00001" summary="some classes and structure for application">
+      <created>1448400304201</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1448400304201</updated>
+    </task>
+    <task id="LOCAL-00002" summary="more...&#10;some classes and structure for application&#10;">
+      <created>1448400687110</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1448400687110</updated>
+    </task>
+    <task id="LOCAL-00003" summary="and more than more...&#10;some classes and structure for application&#10;">
+      <created>1448450994917</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1448450994917</updated>
+    </task>
+    <task id="LOCAL-00004" summary="some progress with Xpath now...&#10;">
+      <created>1448495913753</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1448495913753</updated>
+    </task>
+    <task id="LOCAL-00005" summary="scraping cal and creates object Person&#10;">
+      <created>1448641368148</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1448641368148</updated>
+    </task>
+    <task id="LOCAL-00006" summary="and som progress with scraping of calender and creating object of persons days and so on....">
+      <created>1448698247386</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1448698247386</updated>
+    </task>
+    <task id="LOCAL-00007" summary="extract days and films...">
+      <created>1448883203881</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1448883203881</updated>
+    </task>
+    <task id="LOCAL-00008" summary="renaming classes and files...">
+      <created>1448911868367</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1448911868367</updated>
+    </task>
+    <task id="LOCAL-00009" summary="try to get a working interface showing stuff....">
+      <created>1448978301901</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1448978301901</updated>
+    </task>
+    <task id="LOCAL-00010" summary="try to get a working interface showing stuff....">
+      <created>1449007037194</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1449007037194</updated>
+    </task>
+    <task id="LOCAL-00011" summary="almost done. But first fix function for booking at Zekes Restaurant!">
+      <created>1449080622115</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1449080622115</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ready!">
+      <created>1449329852053</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1449329852053</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Some code fix.">
+      <created>1449698178815</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1449698178815</updated>
+    </task>
+    <task id="LOCAL-00014" summary="readme">
+      <created>1449698803528</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1449698803528</updated>
+    </task>
+    <task id="LOCAL-00015" summary="readme">
+      <created>1449699409579</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1449699409579</updated>
+    </task>
+    <task id="LOCAL-00016" summary="readme">
+      <created>1449699456008</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1449699456008</updated>
+    </task>
+    <task id="LOCAL-00017" summary="readme">
+      <created>1449699487893</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1449699487893</updated>
+    </task>
+    <task id="LOCAL-00018" summary="readme">
+      <created>1449699815518</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1449699815518</updated>
+    </task>
+    <task id="LOCAL-00019" summary="readme">
+      <created>1449700529340</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700529340</updated>
+    </task>
+    <task id="LOCAL-00020" summary="readme">
+      <created>1449700591152</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700591152</updated>
+    </task>
+    <task id="LOCAL-00021" summary="readme">
+      <created>1449700637102</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700637102</updated>
+    </task>
+    <task id="LOCAL-00022" summary="readme">
+      <created>1449700757842</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700757842</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="PlantUML" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5928994" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291866" sideWeight="0.5021322" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291866" sideWeight="0.4978678" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21680498" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489339" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22014925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1359275" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29760766" sideWeight="0.48081023" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39881656" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="PlantUML" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5928994" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2708134" sideWeight="0.5170576" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21680498" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15831557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1391258" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2708134" sideWeight="0.48294243" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495707" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39881656" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some classes and structure for application" />
+    <MESSAGE value="more...&#10;some classes and structure for application&#10;" />
+    <MESSAGE value="and more than more...&#10;some classes and structure for application&#10;" />
+    <MESSAGE value="some progress with Xpath now...&#10;" />
+    <MESSAGE value="scraping cal and creates object Person&#10;" />
+    <MESSAGE value="and som progress with scraping of calender and creating object of persons days and so on...." />
+    <MESSAGE value="extract days and films..." />
+    <MESSAGE value="renaming classes and files..." />
+    <MESSAGE value="try to get a working interface showing stuff...." />
+    <MESSAGE value="almost done" />
+    <MESSAGE value="almost done. But first fix function for booking at Zekes Restaurant!" />
+    <MESSAGE value="Ready!" />
+    <MESSAGE value="Some code fix." />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scrapeApp.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookie.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/SinglePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19165379">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding>
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697085901" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/BookingTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46058732">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <marker date="1449697933105" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697933105" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697933105" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697933105" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449697933105" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/SiteConfigurator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1449249775000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449249775000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449249775000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449249775000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449249775000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/AvailableCalendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449252066000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/CinemaCalendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9149923">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449696734796" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Scrape.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5239568">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39473686">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

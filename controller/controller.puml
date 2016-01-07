@@ -1,0 +1,16 @@
+@startuml
+
+class controller.Master{
+doApp()
+}
+controller.Master ..> controller.Scrape
+
+
+class controller.Scrape{
+    -scrapedData
+    +DoScrape()
+    +DoFilterScrapedData()
+    +GetScrapedData()
+}
+
+@enduml

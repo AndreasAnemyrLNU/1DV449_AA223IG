@@ -1,0 +1,9 @@
+@startuml
+
+!include model/model.puml
+!include view/view.puml
+!include controller/controller.puml
+
+controller.Scrape ..> model.agent.Agent
+
+@enduml
